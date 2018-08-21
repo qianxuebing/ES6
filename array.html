@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组</title>
+	</head>
+	<body>
+		
+		<script>
+			
+			/*
+			 map:映射-----一个对一个；
+			 reduce：汇总----一堆对一个；
+			 filter:过滤器
+			 forEach:循环(迭代)
+			 * */
+			
+			//map			
+			let arr = [2,3,4];
+			let arr1 = arr.map(item=>item*2);
+			alert(arr1); // 4 6 8
+			
+			let score=[60,56,98,30,67];
+			let result=score.map(item=>item>=60?'及格':'不及格');
+			 alert(result); // 及格,不及格,及格,不及格,及格
+			
+		</script>
+		
+		
+	</body>
+</html>
