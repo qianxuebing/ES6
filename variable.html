@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>变量let和const</title>
+	</head>
+	<body>
+		
+		<input type="button" name="" id="" value="按钮0" />
+		<input type="button" name="" id="" value="按钮1" />
+		<input type="button" name="" id="" value="按钮2" />
+		
+		
+		<script src="script/jquery-1.10.2.min.js"></script>
+		<script>
+			
+			/*
+			 * 一.与var的区别
+			 * 	1.var可以重复声明，无法限制修改，没有块级作用域
+			 * 	2.let和const 不能重复声明，块级作用域，let是变量，可以修改，const是常量，不能修改
+			 */
+			
+			let a = 1;
+//			let a = 5; 
+			console.log(a) //  Identifier 'a' has already been declared (报错：重复声明)
+			
+			let b = 3;
+			b = 4;
+			console.log(b); // 4
+			
+			const c = 5;
+//			c = 6;
+			console.log(c); //  Assignment to constant variable.(报错：常量不可修改)
+			
+			
+			/*for (var i=0; i<$("input").length; i++) {
+				$('input').eq(i).click(function(){
+					console.log(i); // 全是3
+				})
+			}*/
+			
+			for (let i=0; i<$("input").length; i++) {
+				$('input').eq(i).click(function(){
+					console.log(i); // 依次输出 0 1 2
+				})
+			}
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>
