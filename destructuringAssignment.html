@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>解构赋值</title>
+	</head>
+	<body>
+		
+		<script>
+
+/*			1.左右；两边解构必须一致
+ * 			2.右边必须是个东西
+ * 			3.声明和赋值不能分开(必须在一句话里完成)
+ */
+		
+		
+			//数组
+			let [a,b,c]=[1,2,3];
+			document.write('a:'+a+',b:'+b+',c:'+c+'<br>'); // a:1,b:2,c:3
+			
+			//json
+			let {d,e,f}={d:0,e:6,f:8};
+			document.write('d:'+d+',e:'+e+',f:'+f+'<br>');	// d:0,e:6,f:8	
+			
+			
+			let [{j,k},[n1,n2,n3],num,str]=[{j:4,k:5},[0,5,6],9,'qian'];
+			document.write(j,k,n1,n2,n3,num,str+'<br>'); // 450569qian
+			
+			//粒度
+			let [json,arr, num1,str1]=[{g:8,p:5},[2,3,4],0,'xue'];
+			console.log(json,arr, num1,str1);
+			
+		</script>
+		
+		
+		
+	</body>
+</html>
