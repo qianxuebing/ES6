@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>箭头函数</title>
+	</head>
+	<body>
+
+		
+		<script src="script/jquery-1.10.2.min.js"></script>
+		<script>
+/*
+ * 			写法：() => {}
+ * 
+ * 			1.如果只有一个参数，()可以省略  ；   ()---只有一个参数
+ * 			2.如果只有一个return,{}可以省略 ；  {}---只有一个return
+*/			
+			let show=()=>{
+				document.write('箭头函数无参数');
+			}
+			show();
+			
+			document.write('<br>');
+			
+			//两个参数
+			let demo=(a,b)=>{
+				document.write('a:'+a+',b:'+b+'\na+b='+(a+b));
+			}
+			demo(2,4);
+			
+			document.write('<br>');
+			
+			//只有一个return
+			let arr=[12, 5, 8, 99, 33, 14, 26];
+			arr.sort((a,b)=>a-b);
+			document.write(arr);
+			
+			document.write('<br>');
+			
+			//只有一个参数 一个return
+			let pre=a=>a*2;
+			document.write(pre(4));
+			
+		</script>
+		
+		
+	</body>
+</html>
