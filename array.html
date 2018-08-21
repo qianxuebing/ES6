@@ -23,6 +23,57 @@
 			let score=[60,56,98,30,67];
 			let result=score.map(item=>item>=60?'及格':'不及格');
 			 alert(result); // 及格,不及格,及格,不及格,及格
+			 
+			 
+			 //reduce
+				 //累加
+				 let arr2=[34,58,90];
+				 let all = arr2.reduce((tmp,item,index)=>item+tmp);
+				 document.write(all+'<br>'); // 182
+				 
+				 
+				//求平均数
+				let arr3=[120,450,65,78,90];
+				let col = arr3.reduce((tmp,item,index)=>{
+					if (index!=arr3.length-1) {
+						return tmp+item
+					} else{
+						return (tmp+item)/arr3.length;
+					}
+				})
+				document.write(col+'<br>'); // 160.6
+			
+//			filter
+			let arr4=[20,65,89,60];
+			let fo=arr4.filter(item=>item%3==0);
+			document.write(fo+'<br>');
+			
+			let arr5=[
+				{
+					title:'男士衬衫',
+					price:'75'
+				},{
+					title:'女士包',
+					price:'5050'
+				},{
+					title:'男包',
+					price:'90'
+				},{
+					title:'女鞋',
+					price:'1298'
+				}
+			];
+			
+			let fn=arr5.filter(json=>json.price>=1000);
+			console.log(fn); // [0:{title: "女士包", price: "5050"},1:{title: "女鞋", price: "1298"}]
+			
+			
+			// forEach
+			let arr6=[34,76,98,57];
+			arr6.forEach((item,index)=>{
+				document.write(index+":"+item+'<br>');  // 0:34 1:76 2:98 3:57
+			})
+			
 			
 		</script>
 		
