@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>generator--生成器函数</title>
+	</head>
+	<body>
+		
+		<script>
+			
+			/*普通函数---一路到底
+			 * generator函数----中间能停(常用于发送请求)
+			 * 	踹一脚走一步		
+			 * 
+			 * 
+			 * 普通函数
+			 * function 函数名(){   
+			 * 		代码...
+			 * 
+			 * 		ajax(xxx,function(){
+			 * 			代码...
+			 * 		})
+			 * }
+			 * 
+			 * 
+			 * generator函数
+			 * 
+			 * function *函数名(){
+			 * 		代码...
+			 * 
+			 * 		yield ajax(xxx);
+			 * 		
+			 * 		代码...
+			 * }
+			 */
+			
+			
+			function *show(){
+				alert("a");
+				yield;
+				alert("b");
+			}
+			
+			let func=show();
+			func.next(); // a
+			func.next(); // a b
+			
+			
+		</script>
+		
+	</body>
+</html>
