@@ -6,6 +6,10 @@
 	</head>
 	<body>
 		
+		<ul class="box"></ul>
+		
+		<script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="script/runner.js"></script>
 		<script>
 			
 			/*普通函数---一路到底
@@ -44,6 +48,18 @@
 			let func=show();
 			func.next(); // a
 			func.next(); // a b
+			
+			runner(function *(){
+				let data1=yield $.ajax({url:'data/arr.txt', dataType:'json'});
+				let data2=yield $.ajax({url:'data/json.txt', dataType:'json'});
+				let data3=yield $.ajax({url:'data/num.txt', dataType:'json'});
+				
+				console.log(data1,data2,data3); // [12, 78, 9, 65, 35, 1, 7] {a: 5, b: 9, c: "qian"} 888
+				
+				for (let i = 0; i < data1.length; i ++) {
+					$(".box").append(`<li>${data1[i]}</li>`);
+				}
+			})
 			
 			
 		</script>
