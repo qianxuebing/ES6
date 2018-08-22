@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串</title>
+	</head>
+	<body>
+		
+		
+		<script>
+			
+			/*两个新方法：
+			 *  startsWith
+			 * 	endsWith
+			 * 
+			 * 字符串模板：返单引号（` `)
+			 * 	1.字符串链接：直接把东西塞到字符串里面  ${东西}
+			 * 	2.可以折行 
+			 */
+			
+			let str="abskjk";
+			alert(str.startsWith('a')); // true
+			
+			let str2="http://www.baidu.com";
+			alert(str2.startsWith("http://")); // true
+			
+			
+			let imgs="1.png";
+			if (imgs.endsWith(".png")) {
+				alert('png文件'); // png文件
+			} else{
+				alert("其他");
+			}
+			
+			
+			
+			//字符串模板
+			let title="标题";
+			let content="内容";
+			let str3=`<div>
+						<h1>${title}</h1>
+						<p>${content}</p>							
+					</div>`
+			document.write(str3);
+			
+			
+		</script>
+		
+		
+		
+		
+		
+	</body>
+</html>

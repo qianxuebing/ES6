@@ -35,9 +35,9 @@
 				//求平均数
 				let arr3=[120,450,65,78,90];
 				let col = arr3.reduce((tmp,item,index)=>{
-					if (index!=arr3.length-1) {
+					if (index!=arr3.length-1) {  // 不是最后一次
 						return tmp+item
-					} else{
+					} else{    // 最后一次
 						return (tmp+item)/arr3.length;
 					}
 				})
@@ -46,7 +46,7 @@
 //			filter
 			let arr4=[20,65,89,60];
 			let fo=arr4.filter(item=>item%3==0);
-			document.write(fo+'<br>');
+			document.write(fo+'<br>'); // 60
 			
 			let arr5=[
 				{
