@@ -50,7 +50,11 @@ ES6又称`ES2015`
 	```
 
 * 面向对象
-
+	* class关键字 构造器和类分开
+	* class里面直接加方法
+	>继承
+	>>super();
+	>>超类==父类
 ```
 	class Text{
 		constructor(name,age){
