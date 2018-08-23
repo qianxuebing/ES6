@@ -94,7 +94,7 @@ ES6又称`ES2015`
 		alert("成功");
 		console.log(arr,json,num);
 	},err=>{
-			alert("失败");
+		alert("失败");
 	})		
 	```
 
