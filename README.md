@@ -55,6 +55,7 @@ ES6又称`ES2015`
 	>继承
 	>>super();
 	>>超类==父类
+	
 ```
 	class Text{
 		constructor(name,age){
