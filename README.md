@@ -29,13 +29,13 @@ ES6又称`ES2015`
 	* 参数扩展：...
 	* 默认参数
 		
-				```
-				function show(a,b=2){
-					alert(a,b);
-				}
+	```
+	function show(a,b=2){
+		alert(a,b);
+	}
 				
-				show(5); // 5  2				
-				```
+	show(5); // 5  2				
+	```
 	* 数组方法：
 		* map ------- 映射，一个对一个
 		* reduce ---- 汇总，一堆 --> 一个
@@ -47,44 +47,44 @@ ES6又称`ES2015`
 	* 字符串模板
 		
 	```
-	`${a}xxx${b}`		
+	${a}xxx${b}		
 	```
 
 * 面向对象
 
-		```
-		class Text{
-			constructor(name,age){
-				this.name=name;
-				this.age=age;
-			},
-			showName(){
-				alert(this.name);
-			},
-			showAge(){
-				alert(this.age);
-			}			
-		}
+```
+	class Text{
+		constructor(name,age){
+			this.name=name;
+			this.age=age;
+		},
+		showName(){
+			alert(this.name);
+		},
+		showAge(){
+			alert(this.age);
+		}			
+	}
 		
-		class Test2 extends Text{
-			constructor(name,age,sex){
-				super(name,age);
-				this.sex=sex;
-			},
-			showSex(){
-				alert(this.sex);
-			}
+	class Test2 extends Text{
+		constructor(name,age,sex){
+			super(name,age);
+			this.sex=sex;
+		},
+		showSex(){
+			alert(this.sex);
 		}
+	}
 		
-		let u1 = new Test2("xiaoming","12","boy");
-		u1.showName();	// xiaoming	
-		u1.showAge();		// 12
-		u1.showSex();		// boy		
-		```
+	let u1 = new Test2("xiaoming","12","boy");
+	u1.showName();	// xiaoming	
+	u1.showAge();		// 12
+	u1.showSex();		// boy		
+```
 
 * Promise
 	* 封装异步操作
-	* 
+	
 	```
 	Promise.all([
 		let one=$.ajax({url:"data/arr.txt",dataType:"json"});
